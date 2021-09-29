@@ -1,0 +1,112 @@
+.second-screen {
+    background: url(../img/bg/second-bg.webp)no-repeat bottom;
+    background-size: cover;
+
+    &__content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            position: relative;
+            height: 100%;
+            padding-top: 140px;
+            padding-bottom: 140px;
+            z-index: 3;
+
+            &:after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: -10px;
+                z-index: -1;
+                background: url(../img/ashmanov.webp)no-repeat bottom right;
+            }
+        }
+
+        .title {
+            @include title();  
+            margin-bottom: 70px;          
+        }
+        .description {
+            position: relative;
+            margin-bottom: 40px;
+            max-width: 555px;
+            z-index: 3;
+
+            p{  
+                color: #ACB6EA;
+                margin-bottom: 10px;
+            }
+
+            &:before{
+                content: '';
+                width: 120px;
+                height: 70px;
+                display: block;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -45px;
+                z-index: -1;
+                left: -65px;
+                @extend .--svg__blaquote;
+            }
+        }
+        .author-info {
+            max-width: 460px;
+        
+            &__name {
+                @include min_title();                
+                margin-bottom: 8px;
+            }
+        
+            &__position {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 110%;
+                letter-spacing: 0.1em;
+                color: #FFFFFF;
+            }
+        }
+
+        @media (max-width: 902px) {
+            .container{
+                padding-top: 50px;
+                padding-bottom: 0;
+
+                &:after{
+                    height: 360px;
+                    background-position: center;
+                    background-size: contain;
+                    position: relative;
+                    right: 0;
+                    left: 0;
+                    margin-top: 16px;
+                }
+            }
+
+            .title{
+                font-size: 34px;
+            }
+
+            .author-info {
+            
+                &__name {
+                    font-size: 16px;
+                }
+            
+                &__position {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+

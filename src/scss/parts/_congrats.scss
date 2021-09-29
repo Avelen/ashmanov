@@ -1,0 +1,187 @@
+.congrats {
+    background: radial-gradient(100% 100% at 0% 0%, #162079 50.46%, #0968BF 68.17%, rgba(255, 41, 79, 0.8) 86.4%), #1B3C7E;
+
+    &__content {
+        padding-top: 90px;
+        padding-bottom: 60px;
+        position: relative;
+        
+        &:before{
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            background-image: url(../img/congr-circle.png);
+            background-repeat: no-repeat;
+            max-width: 60%;
+            background-position: left center;
+            opacity: 0.4;
+            z-index: 1;
+
+            @media (max-width: 902px) {
+                background-size: cover;
+                background-position: right center;
+            }
+        } 
+
+        &-top {
+            position: relative;
+            z-index: 3;
+            padding: 0!important;
+
+            .title {
+                @include title();
+                margin-bottom: 25px;
+            }
+            .epilog {
+                font-family: Halvar Breitschrift;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 110%;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 3;
+            padding: 0!important;
+            
+            .left-side{
+                max-width: 360px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+
+                p{
+                    margin: 38px 0 24px;
+                    color: #ACB6EA;
+
+                    @media (max-width: 902px) {
+                        margin-top: 0;
+                    }
+                }
+
+                .callback{
+                    margin-bottom: 16px;
+
+                    a{
+                        padding: 12px 32px;
+                        background: #FF294F;
+                        border: 3px solid #1B2232;
+                        box-sizing: border-box;
+                        font-family: Halvar Breitschrift;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 110%;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        display: inline-block;
+                        transition: 0.3s;
+            
+                        &:hover{
+                            background: #0968BF;
+                        }
+                        &:active{
+                            background: none;
+                            border-color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .tags {
+                align-self: flex-end;
+                
+                &-item {
+                    font-family: Halvar Breitschrift;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 110%;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #1B2232;
+                    padding: 16px;
+                    background: #fff;
+                    border: 5px solid #1B2232;
+                    box-sizing: border-box;
+                    margin-bottom: 15px;
+                    max-width: max-content;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .right-side{
+                width: 60%;
+            }
+            
+            .slider {
+
+                .item {
+
+                    img{
+                        padding: 16px;
+                        background: #fff;
+                        border: 5px solid #1B2232;
+                        box-sizing: border-box;
+                        display: block;
+                        max-width: 100%;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    @media (max-width: 902px) {
+        padding: 50px 0;
+
+        &__content {
+            padding: 0;
+    
+            &-top {
+                .title{
+                    font-size: 34px;
+                }
+                .epilog{
+                    font-size: 16px;
+                    margin-bottom: 40px;
+                }
+            }
+            &-bottom{
+                flex-wrap: wrap;
+
+                .left-side {
+                    order: 2;
+                }
+                .right-side {
+                    order: 1;
+                    width: 100%;
+                    margin-bottom: 24px;
+
+                    .slider{
+
+                        img{
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

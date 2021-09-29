@@ -1,0 +1,76 @@
+.first-screen {
+
+    &_content {
+        position: relative;
+
+        .container{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .image {
+            width: 100%;
+            display: block;
+            height: 100vh;
+            background: url(../img/bg/first-bg.webp)no-repeat center;
+            background-size: cover;
+        }
+        .text {
+            position: absolute;
+            bottom: 140px;
+        
+            &__title {
+                @include title();
+                margin-bottom: 24px;
+            }
+        
+            &__desc {
+                font-family: Halvar Breitschrift;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 110%;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
+        .social {
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        
+            &__list {
+
+                @include social();
+            }
+        }
+
+        @media (max-width: 902px) {
+            .container{
+                padding: 0 16px;
+                width: 100%;
+            }
+            .text{
+                bottom: 50px;
+
+                &__title{
+                    font-size: 34px;
+                    line-height: 90%;
+                    margin-bottom: 16px;
+                }
+                &__desc{
+                    font-size: 16px;
+                    line-height: 110%;
+                }
+            }
+            .social{
+                display: none;
+            }
+        }        
+    } 
+}
+

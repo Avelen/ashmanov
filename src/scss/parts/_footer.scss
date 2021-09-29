@@ -1,0 +1,160 @@
+.footer {
+    background: #162079;
+    padding: 25px 16px;
+
+    &__content {
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-item {
+            display: flex;
+            grid-gap: 55px;
+            flex-wrap: wrap;
+
+
+            .logo {
+    
+                .block {
+                    width: 25px;
+                    height: 40px;
+                    display: block;
+                    @include bg('contain');
+                }
+            }
+            
+            .location {
+
+                .name {
+                    font-family: Halvar Breitschrift;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 110%;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+                .address {
+                    color: #ACB6EA;
+                }
+                .phone {
+                    margin-top: 15px;
+                    margin-bottom: 0;
+                    
+                    a{
+                        color: #ACB6EA;
+                        transition: 0.3s;
+
+                        &:hover{
+                            color: #FF294F;
+                        }
+                    }
+                }
+            }
+
+            .social {
+    
+                &__list {
+
+                    @include social();
+                }
+            }
+            
+            .callback {
+                text-align: center;
+        
+                .call {
+                    font-family: Halvar Breitschrift;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 110%;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    padding: 12px 32px;
+                    background: #0968BF;
+                    border: 3px solid #1B2232;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background: #FF294F;
+                    }
+                    &:active{
+                        background: #0968BF;
+                        border-color: #fff;
+                    }
+                }
+                .mail {
+                    font-family: Halvar Breitschrift;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 110%;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    margin-top: 15px;
+                    text-align: center;
+
+                    a{
+                        color: #FFFFFF;
+                        text-decoration: none;
+                        transition: 0.3s;
+
+                        &:hover{
+                            color: #FF294F;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .powered {
+        margin-top: 30px;
+        text-align: center;
+
+        .info {
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 110%;
+            letter-spacing: 0.1em;
+            color: #ACB6EA;
+        }
+    }
+
+    @media (max-width: 902px) {
+
+        &__content {
+
+            &-item{
+                grid-gap: 0;
+
+                .logo{
+                    margin-bottom: 24px;
+                }
+
+                &:last-child{
+                    margin-top: 24px;
+                    justify-content: center;
+                }
+                .callback {
+                    order: 1;
+                }
+                .social{
+                    margin-top: 24px;
+                    order: 2;
+                }
+            }
+        }
+    }
+}
+

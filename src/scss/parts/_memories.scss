@@ -1,0 +1,93 @@
+.memories {
+
+    &__content {
+        padding: 90px 0 75px;
+
+        .title {
+            @include title("72px","#162079;");  
+            margin-bottom: 25px; 
+            text-shadow: none;
+        }
+        .epilog {
+            font-family: Halvar Breitschrift;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 110%;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #162079;
+        }
+
+        &-slider {
+
+            .slick-arrow{
+                @include slider-arrow(ACB6EA);                
+            }
+
+            .slick-list{
+                overflow-x: auto;
+                padding: 50px 0 60px;
+
+                &::-webkit-scrollbar-button {
+                    width: 10px;
+                    height: 16px;
+                    background: #fff;
+                }
+
+                &::-webkit-scrollbar{
+                    background: #0968BF;
+                    height: 16px;
+                }
+                &::-webkit-scrollbar-track{
+                    border: 3px solid #1B2232;
+                    background: #0968BF;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background: #FF294F;
+                    border: 3px solid #1B2232;
+                }
+            }
+
+            .item {
+                
+                img{
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 902px) {
+
+        &__content{
+            padding: 50px 0;
+
+            &-slider{
+                padding: 0!important;
+
+                .slick-list{
+                    overflow: hidden;
+                    padding: 16px 0 0;
+                }
+                .item{
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .title{
+                font-size: 34px;
+            }
+            .epilog{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+

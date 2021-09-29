@@ -1,0 +1,131 @@
+@mixin year(){
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 170px;
+    margin-top: 60px;
+
+    .year{
+        position: absolute;
+        font-family: Halvar Breitschrift;
+        font-style: normal;
+        font-weight: 800;            
+        text-transform: uppercase;
+
+        &-line{
+            width: 100%;
+            height: 140px;
+            display: block;
+            background: url(../img/bg/year-ellipse.webp)no-repeat top center;
+        }
+
+        &.year-first {
+            font-size: 18px;
+            line-height: 90%;
+            color: #BBBED8;
+            bottom: 60px;
+            left: 0;
+
+            &:before{
+                content: '';
+                border: 5px solid #BBBED8;
+                position: absolute;
+                right: -5px;
+                width: 12px;
+                height: 12px;
+                bottom: -30px;  
+                display: block;   
+                border-radius: 100%;
+                box-sizing: content-box;           
+            }
+        }
+        &.year-secont {
+            color: #8388B8;
+            font-size: 24px;
+            line-height: 90%;
+            bottom: 160px;
+            left: 60px;
+
+            &:before{
+                content: '';
+                border: 5px solid #8388B8;
+                position: absolute;
+                right: -7px;
+                width: 16px;
+                height: 16px;
+                bottom: -36px;  
+                display: block;              
+                border-radius: 100%;    
+                box-sizing: content-box;       
+            }
+        }
+        &.year-third {
+            color: #FF294F;
+            text-transform: uppercase;
+            font-size: 64px;
+            line-height: 90%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+            width: max-content;
+            top: 0;
+
+            &:before{
+                content: '';
+                border: 5px solid #FF294F;;
+                position: absolute;
+                right: 0;
+                left: 0;
+                margin: auto;
+                width: 32px;
+                height: 32px;
+                bottom: -50px;  
+                display: block;              
+                border-radius: 100%;  
+                box-sizing: content-box;         
+            }
+        }
+        &.year-four {
+            color: #8388B8;
+            font-size: 24px;
+            line-height: 90%;
+            bottom: 160px;
+            right: 60px;
+
+            &:before{
+                content: '';
+                border: 5px solid #8388B8;
+                position: absolute;
+                left: -7px;
+                width: 16px;
+                height: 16px;
+                bottom: -36px;  
+                display: block;              
+                border-radius: 100%;  
+                box-sizing: content-box;         
+            }
+        }
+        &.year-five {
+            font-size: 18px;
+            line-height: 90%;
+            color: #BBBED8;
+            bottom: 60px;
+            right: 0;
+
+            &:before{
+                content: '';
+                border: 5px solid #BBBED8;
+                position: absolute;
+                left: -5px;
+                width: 12px;
+                height: 12px;
+                bottom: -30px;  
+                display: block;              
+                border-radius: 100%;
+                box-sizing: content-box;           
+            }
+        }
+    }
+}

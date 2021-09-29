@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+@@include('../components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Ashmanov.com",
+"description":"20-летие «Ашманов и партнеры» ",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('../components/page-blocks/_header.html')
+
+	<section class="single-review">
+		<div class="single-review__heading">
+			@@include('../components/bem-blocks/single-review/_heading.html',{
+                "imgnum": "12",
+				"name":"Екатерина титова",
+				"prev":"С 2015 по 2018 менеджер по работе с клиентами «Ашманов и партнеры»",
+				"now":"Head of Marketing Raiffeisen Capital",
+				"position":"Участник программы отраслевых конференций",
+				"position2":"",
+				"company":"",
+				"desc":""
+			})
+		</div>
+		<div class="single-review__body">
+			<div class="container">
+				<div class="single-review__content">
+                    <h3>Екатерина, что тебя привлекло в компании так, что ты пришла в нее работать?</h3>
+                    <p>Готовность компании обучать и развивать сотрудников, небольшое количество проектов на менеджера. Я занималась проектами по SEO и UX, работала с крупными клиентами— ЦБ РФ, Лореаль, также было интересно работать с другими международными марками и брендами косметики.</p>
+                    <h3>Какие экспертизы компании ты считаешь наиболее важными?</h3>
+                    <p>Техническое SEO, так как это основа продвижения сайта</p>
+                    <h3>Что определяет успех компании, помимо экспертизы?</h3>
+                    <p>Опыт. АиП много лет на рынке, поэтому компания наработала богатый опыт и узнаваемость</p>
+                    <h3>Что можно назвать главным активом АиП?</h3>
+                    <p>Менеджеры и оптимизаторы</p>
+                    <h3>Для запуска своего проекта ты бы взяла что-то у «Ашманов и партнера»  и партнеры»?</h3>
+                    <p>Да — способность к найму проактивных людей.</p>
+                    <h3>Твое пожелание на следующие 20 лет?ла что-то у «Ашманов и партнера»  и партнеры»?</h3>
+                    <p>Только развитие!</p>
+                </div>
+			</div>
+			<div class="single-review__form">
+				@@include('../components/bem-blocks/single-review/_form.html')
+			</div>
+		</div>
+		<div class="single-review__next-btn">
+			<a href="/reviews/shewcow.html" class="btn">следующий отзыв</a>
+		</div>
+	</section>
+    
+	@@include('../components/page-blocks/_footer.html')
+	@@include('../components/page-blocks/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+.way-page {
+    min-height: 720px;
+
+    &__content {
+        padding-top: 90px;
+        display: flex;
+        height: 100%;
+
+        &-flex{
+            display: grid;
+            max-width: 100%;
+            grid-template-columns: 100%;
+        }
+
+        .container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .title {
+            @include title("72px","#162079;");  
+            margin-bottom: 25px; 
+            text-shadow: none;
+        }
+    }
+
+    &__content-desc {
+
+        .slick-list{
+            padding: 0 20px;
+            margin-left: -15px;
+        }
+
+        .way-of{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .left-side, .right-side{
+                max-width: 45%;
+
+                img{
+                    max-width: 100%;
+                }
+            }
+
+            ul{
+                li{
+                    @extend p;
+                    color: #162079;
+                    margin-bottom: 15px;
+                    position: relative;
+
+                    &:before{
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        background: #FF294F;
+                        position: absolute;
+                        left: -20px;
+                        top: 3px;
+                        display: block;
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+                
+    }
+
+    &__line {
+        // @include year;
+        @include year_two();        
+    }
+
+    @media (max-width: 902px) {
+        min-height: 0;
+        overflow: hidden;
+
+        &__content{
+            padding-top: 50px;
+
+            .title {
+                font-size: 34px;
+            }
+        }
+
+        &__line{
+            order: 1;
+        }
+
+        &__content-flex{
+            padding: 0!important;
+        }
+
+        &__content-desc{
+            padding: 0!important;
+            order: 2;
+            margin-bottom: 24px;
+
+            .slick-list{
+                margin-left: 0;
+            }
+
+            .way-of{
+                grid-gap: 0;
+
+                .left-side, .right-side{
+                    max-width: 100%;
+
+                    img{
+                        max-width: 100%;
+                        display: block;
+                        margin: 24px auto 0;
+                    }
+                }
+            }
+        }
+        &__line{
+            display: none;
+        }
+    }
+}
+
+
+
