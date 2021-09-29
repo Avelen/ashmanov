@@ -410,5 +410,20 @@ $(function() {
             
         });
 
+        $('.share-link-item').click(function(){
+            navigator.clipboard
+                .writeText(`${window.location.href}`)
+                .then(() => {
+                    $('.copy-ok').remove();
+                    $(this).after($('<span>', {
+                        class: 'copy-ok',
+                        text: 'Ссылка скопирована'
+                    }));
+                })
+                .catch(() => {
+                    console.log(false);
+                });
+        });
+
     });
 });
