@@ -362,6 +362,10 @@ $(function() {
                 centerMode: false,
                 focusOnSelect: true
             });
+            
+            setTimeout(function(){
+                $('.single-review__form').addClass('show');
+            }, 500);
         }
         // year line end
 
@@ -386,6 +390,25 @@ $(function() {
                 
         });
 
-        
+        if(Cookies.get('close-rf') == 'true'){
+            $('.review-form').addClass('closed');
+        } 
+
+        $('.review-form').on('click', '.close', function(){
+
+            if($('.review-form').hasClass('closed'))
+            {
+                $('.review-form').removeClass('closed');
+                Cookies.set('close-rf', 'false');
+            }
+            else 
+            {
+                $('.review-form').addClass('closed');
+                $('.review-form .call').hide('slow');
+                Cookies.set('close-rf', 'true'); 
+            }
+            
+        });
+
     });
 });

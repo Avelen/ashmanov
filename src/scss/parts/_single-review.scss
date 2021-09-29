@@ -178,6 +178,17 @@
             padding-right: 0!important;
         }
 
+        .close{
+            @include bg("contain", "center");
+            display: none;
+            width: 20px;
+            height: 10px;
+            position: absolute;
+            top: 16px;
+            right: 17px;
+            transition: 0.3s;
+        }
+
         .form-title {
             @include min_title("18px","#1B2232");  
             margin-bottom: 16px;
@@ -218,6 +229,12 @@
             bottom: 0;
             left: 0;
             right: 0;
+            opacity: 0;
+            transition: 0.3s;
+
+            &.show{
+                opacity: 1;
+            }
 
             .review-form{
                 width: 100%;
@@ -233,12 +250,16 @@
                 .form-title{
                     margin-bottom: 12px;
                     font-size: 16px;
+                    margin-bottom: 0;
                 }
 
                 .call{
-                    margin-top: 0;
+                    margin-top: 16px;
                 }
 
+                .close{
+                    display: block;
+                }
 
                 &__content{
                     padding-left: 0;
@@ -248,11 +269,21 @@
                         display: none;
                     }
                 }
+
+                &.closed{
+
+                    .call{
+                        display: none;
+                    }
+                    .close{
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
 
         & + .footer{
-            margin-bottom: 110px;
+            margin-bottom: 50px;
         }
     }
 }
