@@ -144,6 +144,7 @@ p{
 		background-position: center;	
 		cursor: pointer;
 		transition: 0.3s;
+		z-index: 3;
 
 		&:hover{
 			opacity: 0.8;
